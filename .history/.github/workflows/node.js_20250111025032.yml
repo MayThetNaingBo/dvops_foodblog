@@ -1,0 +1,44 @@
+name: Automatic Testing for Food Blog Web App
+
+on:
+  push:
+    branches:
+      - main # Workflow triggers on push to the main branch
+  pull_request: # Workflow also triggers on pull requests to the main branch
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code from the repository
+      - name: Checkout code from GitHub Repo
+        uses: actions/checkout@v3
+
+      # Step 2: Setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Step 3: Remove the existing node_modules folder (if necessary)
+      - name: Remove existing node_modules folder
+        run: rm -rf node_modules
+
+      # Step 4: Install dependencies from package.json
+      - name: Install dependencies
+        run: npm install
+
+      # Step 5: Run backend tests located in the "tests" folder
+      - name: Run backend tests
+        run: npm run backend-test
+
+      
+      - name: Run frontend tests
+      run: npm run frontend-test
+      
+      
+      - name: Generate coverage report
+      run: npm run coverage-report
