@@ -39,6 +39,6 @@ jobs:
             - name: Run frontend tests
               run: npm run frontend-test
 
-            # Step 7: Generate the code coverage report
+ # Step 7: Run frontend tests located in the "tests" folder
             - name: Generate coverage report
               run: npm run coverage-report
