@@ -40,3 +40,6 @@ jobs:
               env:
                   NODE_ENV: test
               run: npm run frontend-test
+              - name: Pre-Instrument Frontend Files
+  run: npm run frontend-instrument
+
