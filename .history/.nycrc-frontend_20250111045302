@@ -8,6 +8,7 @@
         "public/js/foodblog.js"
     ],
     "reportDir": "coverage/",
+
     "check-coverage": true,
     "branches": 80,
     "lines": 80,
