@@ -1,0 +1,42 @@
+{
+    "name": "foodblog-dvops",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "backend-test": "nyc --nycrc-path .nycrc-backend mocha",
+        "frontend-instrument": "xcopy public instrumented /I /E /Y & nyc instrument public instrumented",
+        "frontend-test": "rmdir -r .nyc_output & nyc --nycrc-path .nycrc-frontend cypress run",
+        "coverage-report": "nyc report --reporter=text && nyc report --reporter=html"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "chai": "^4.3.4",
+        "chai-http": "^4.3.0",
+        "cypress": "^13.16.0",
+        "express": "^4.21.2",
+        "express-rate-limit": "^7.4.1",
+        "fs": "^0.0.1-security",
+        "mocha": "^11.0.1",
+        "uuid": "^11.0.2"
+    },
+    "devDependencies": {
+        "@cypress/code-coverage": "^3.13.8",
+        "babel-plugin-istanbul": "^7.0.0",
+        "istanbul": "^0.4.5",
+        "nyc": "^17.1.0",
+        "rimraf": "^6.0.1"
+    },
+    "babel": {
+        "env": {
+            "test": {
+                "plugins": [
+                    "istanbul"
+                ]
+            }
+        }
+    }
+}
