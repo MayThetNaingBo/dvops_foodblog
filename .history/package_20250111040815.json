@@ -4,7 +4,7 @@
     "main": "index.js",
     "scripts": {
         "backend-test": "nyc --nycrc-path .nycrc-backend mocha",
-       "frontend-instrument": "npx cpy public/** instrumented/",
+       "frontend-instrument": "npx cpy public/** instrumented/"
 
         "frontend-test": "npx cypress install && node -e \"require('fs').rmSync('.nyc_output', { recursive: true, force: true });\" && nyc --reporter=text --include=**/foodblog.js cypress run",
         "coverage-report": "nyc report --reporter=text && nyc report --reporter=html"

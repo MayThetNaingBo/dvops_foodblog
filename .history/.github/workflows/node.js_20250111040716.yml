@@ -46,6 +46,6 @@ jobs:
 
             - name: Debug coverage data
               run: ls -R .nyc_output
-
+              
             - name: Clean coverage data
-              run: rm -rf coverage/
+  run: rm -rf coverage/

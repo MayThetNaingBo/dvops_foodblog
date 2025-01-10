@@ -4,9 +4,10 @@
         "html"
     ],
     "include": [
-        "public/js/foodblog.js",
-        "**/foodblog.js"
-    ],
+  "public/js/foodblog.js",
+  "**/foodblog.js"
+]
+
     "reportDir": "coverage/",
     "all": true,
     "check-coverage": true,
