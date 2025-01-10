@@ -5,7 +5,8 @@
     "scripts": {
         "backend-test": "nyc --nycrc-path .nycrc-backend mocha",
         "frontend-instrument": "xcopy public instrumented /I /E /Y & nyc instrument public instrumented",
-        "frontend-test": "npx cypress install && rm -rf .nyc_output && nyc --nycrc-path .nycrc-frontend cypress run",
+       "frontend-test": "npx cypress install && rm -rf .nyc_output && nyc --nycrc-path .nycrc-frontend cypress run"
+
         "coverage-report": "nyc report --reporter=text && nyc report --reporter=html"
     },
     "keywords": [],

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1736533444055" clover="3.2.0">
-  <project timestamp="1736533444055" name="All files">
+<coverage generated="1736535809672" clover="3.2.0">
+  <project timestamp="1736535809672" name="All files">
     <metrics statements="168" coveredstatements="104" conditionals="97" coveredconditionals="44" methods="40" coveredmethods="25" elements="305" coveredelements="173" complexity="0" loc="168" ncloc="168" packages="1" files="2" classes="2"/>
     <file name="foodblog.js" path="C:\Users\mayth\Downloads\dvops_foodblog\dvops_foodblog\public\js\foodblog.js">
       <metrics statements="103" coveredstatements="100" conditionals="53" coveredconditionals="43" methods="26" coveredmethods="24"/>
@@ -72,16 +72,16 @@
       <line num="279" count="17" type="stmt"/>
       <line num="280" count="17" type="stmt"/>
       <line num="282" count="9" type="stmt"/>
-      <line num="283" count="771" type="stmt"/>
-      <line num="284" count="771" type="cond" truecount="1" falsecount="1"/>
-      <line num="285" count="771" type="stmt"/>
-      <line num="286" count="771" type="stmt"/>
-      <line num="295" count="771" type="stmt"/>
-      <line num="298" count="771" type="stmt"/>
-      <line num="299" count="771" type="stmt"/>
-      <line num="300" count="3855" type="stmt"/>
-      <line num="305" count="771" type="stmt"/>
-      <line num="323" count="771" type="stmt"/>
+      <line num="283" count="798" type="stmt"/>
+      <line num="284" count="798" type="cond" truecount="1" falsecount="1"/>
+      <line num="285" count="798" type="stmt"/>
+      <line num="286" count="798" type="stmt"/>
+      <line num="295" count="798" type="stmt"/>
+      <line num="298" count="798" type="stmt"/>
+      <line num="299" count="798" type="stmt"/>
+      <line num="300" count="3990" type="stmt"/>
+      <line num="305" count="798" type="stmt"/>
+      <line num="323" count="798" type="stmt"/>
       <line num="329" count="17" type="stmt"/>
       <line num="339" count="34" type="stmt"/>
       <line num="340" count="34" type="stmt"/>
