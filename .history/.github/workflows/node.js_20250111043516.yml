@@ -1,0 +1,46 @@
+name: Automatic Testing for Food Blog Web App
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code from GitHub Repo
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+
+            - name: Remove existing node_modules folder
+              run: rm -rf node_modules
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Clean coverage data
+              run: rm -rf .nyc_output
+
+            - name: Instrument files for coverage
+              run: npx nyc instrument public/js/ instrumented/
+
+            - name: Run backend tests
+              run: npm run backend-test
+
+            - name: Run frontend tests
+              env:
+                  NODE_ENV: test
+              run: npm run frontend-test
+              
+            - name: Pre-Instrument Frontend Files
+              run: npm run frontend-instrument
+
