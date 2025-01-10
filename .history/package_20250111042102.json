@@ -5,7 +5,7 @@
     "scripts": {
         "backend-test": "nyc --nycrc-path .nycrc-backend mocha",
         "frontend-instrument": "xcopy public instrumented /I /E /Y & nyc instrument public instrumented",
-      "frontend-test": "npx cypress install && node -e \"require('fs').rmSync('.nyc_output', { recursive: true, force: true });\" && nyc --reporter=lcov --reporter=text --include=public/js/foodblog.js cypress run"
+       "frontend-test": "npx cypress install && node -e \"require('fs').rmSync('.nyc_output', { recursive: true, force: true });\" && nyc --reporter=lcov --reporter=text cypress run"
 ,
         "coverage-report": "nyc report --reporter=text && nyc report --reporter=html"
     },
@@ -26,6 +26,7 @@
     "devDependencies": {
         "@cypress/code-coverage": "^3.13.8",
         "babel-plugin-istanbul": "^7.0.0",
+        "cpy-cli": "^5.0.0",
         "cypress": "^13.17.0",
         "istanbul": "^0.4.5",
         "nyc": "^17.1.0",
