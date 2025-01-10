@@ -767,5 +767,14 @@
     "rating": "4",
     "content": "This is a valid test blog post content.",
     "imageUrl": "images/NoImage.jpg"
+  },
+  {
+    "id": "1736533420443",
+    "restaurantName": "Test Restaurant",
+    "location": "Test Location",
+    "visitDate": "2024-12-01",
+    "rating": "4",
+    "content": "This is a valid test blog post content.",
+    "imageUrl": "images/NoImage.jpg"
   }
 ]
