@@ -857,5 +857,32 @@
     "rating": "4",
     "content": "This is a valid test blog post content.",
     "imageUrl": "images/NoImage.jpg"
+  },
+  {
+    "id": "1736593012816",
+    "restaurantName": "New Restaurant",
+    "location": "New Location",
+    "visitDate": "2024-12-01",
+    "rating": 4,
+    "content": "Amazing experience!",
+    "imageUrl": "https://example.com/new-image.jpg"
+  },
+  {
+    "id": "1736593012989",
+    "restaurantName": "Test Restaurant",
+    "location": "Test Location",
+    "visitDate": "2024-12-01",
+    "rating": 4,
+    "content": "Test Content",
+    "imageUrl": "images/NoImage.jpg"
+  },
+  {
+    "id": "1736593288608",
+    "restaurantName": "Test Restaurant",
+    "location": "Test Location",
+    "visitDate": "2024-12-01",
+    "rating": "4",
+    "content": "This is a valid test blog post content.",
+    "imageUrl": "images/NoImage.jpg"
   }
 ]
