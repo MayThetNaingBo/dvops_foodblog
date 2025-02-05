@@ -1,0 +1,36 @@
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  build-rms:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: maythetnaingbo/rms-docker-img:v10
+    container_name: rms-docker-container
+    ports:
+      - "8000:5050"
+    networks:
+      - app-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    volumes:
+      - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - app-network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=may
+      - GF_SECURITY_ADMIN_PASSWORD=strongPassword123
+    networks:
+      - app-network
