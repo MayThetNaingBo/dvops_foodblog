@@ -1,0 +1,7 @@
+groups:
+    - name: example_rules
+      rules:
+          - record: instance:cpu_usage
+            expr: process_cpu_seconds_total
+          - record: instance:memory_usage
+            expr: process_resident_memory_bytes

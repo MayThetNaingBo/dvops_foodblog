@@ -1,0 +1,18 @@
+global:
+    scrape_interval: 15s # How often to scrape targets by default.
+    evaluation_interval: 15s # How often to evaluate rules by default.
+
+scrape_configs:
+    - job_name: "nodejs-app" # Descriptive name for the job
+      static_configs:
+          - targets: ['host.docker.internal:8000'] # Replace with the container name and port of your Node.js app
+rule_files:
+  - "rules.yml"
+
+groups:
+  - name: example_rules
+    rules:
+      - record: instance:cpu_usage
+        expr: process_cpu_seconds_total
+      - record: instance:memory_usage
+        expr: process_resident_memory_bytes
